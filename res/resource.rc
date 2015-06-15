@@ -1,0 +1,49 @@
+#include <windows.h>
+#include <commctrl.h>
+#include <richedit.h>
+#include "resource.h"
+
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+IDI_ICON_MAIN       ICON           ".\\icon.ico"
+
+#define VERSION_F       0,4,1,73
+#define VERSION_P       VERSION_F
+#define VERSION_S       "0.4.1.73"
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+1 VERSIONINFO
+    FILEVERSION     VERSION_F
+    PRODUCTVERSION  VERSION_P
+    FILEOS          VOS_UNKNOWN
+    FILETYPE        VFT_UNKNOWN
+    FILESUBTYPE     VFT2_UNKNOWN
+    FILEFLAGSMASK   0x00000000
+    FILEFLAGS       0x00000000
+{
+    BLOCK "StringFileInfo"
+    {
+        BLOCK "000004B0"
+        {
+            VALUE "Comments", 			"FLTK ffmpeg RTSP Player"
+            VALUE "CompanyName", 		"(C)2015 Rageworx freeware."
+            VALUE "FileDescription", 	"FLTK ffmepg RTSP Player"
+            VALUE "FileVersion", 		"BETA03"
+            VALUE "InternalName", 		"RTSPPLAYER.FFMPEG.FLTK133.WIN32"
+            VALUE "LegalCopyright", 	"rage.kim@gmail.com, rageworx@gmail.com"
+            VALUE "LegalTrademarks", 	"(C)2015 rageworx softwares."
+            VALUE "OriginalFilename", 	"FRTSPPLAYER.EXE"
+            VALUE "PrivateBuild", 		""
+            VALUE "ProductName", 		"FLTK RTSP Player w/ ffmpeg"
+            VALUE "ProductVersion", 	VERSION_S
+            VALUE "SpecialBuild", 		""
+        }
+    }
+    BLOCK "VarFileInfo"
+    {
+        VALUE "Translation", 0x0000, 0x04B0
+    }
+}
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+1                  RT_MANIFEST    ".\\manifest.xml"

@@ -1,0 +1,5 @@
+Please place all libffmpeg files here by clone and compile this source:
+
+https://github.com/rageworx/ffmpeg-2.2-mingw
+
+You may need M-sys and latest version of MinGW-W64.

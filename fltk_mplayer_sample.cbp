@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="fltk_mplayer_sample" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug.Win32">
+				<Option output="bin\Debug\fltk_mplayer_sample" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DDEBUG" />
+					<Add option="-D_DEBUG" />
+				</Compiler>
+			</Target>
+			<Target title="Release.Win32">
+				<Option output="bin\Release_p\fltk_rtspp" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release_p\" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-march=core2" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-s" />
+					<Add option="-DRELEASE" />
+					<Add option="-D_RELEASE" />
+					<Add option="-DPERSONAL_R" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-mms-bitfields" />
+			<Add option="-fpermissive" />
+			<Add option="-DWIN32" />
+			<Add option="-D__STDC_CONSTANT_MACROS" />
+			<Add option="-D_ISOC99_SOURCE" />
+			<Add directory="$(#fl.include)" />
+			<Add directory="src" />
+			<Add directory="src\fltk" />
+			<Add directory="ffmpeg" />
+			<Add directory="res" />
+		</Compiler>
+		<Linker>
+			<Add option="-static-libgcc" />
+			<Add option="-static-libstdc++" />
+			<Add library="ffmpeg" />
+			<Add library="fltk_images" />
+			<Add library="fltk_png" />
+			<Add library="fltk" />
+			<Add library="avicap32" />
+			<Add library="pthread" />
+			<Add library="ole32" />
+			<Add library="uuid" />
+			<Add library="comctl32" />
+			<Add library="wsock32" />
+			<Add library="m" />
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="winmm" />
+			<Add library="z" />
+			<Add library="ws2_32" />
+			<Add library="d2d1" />
+			<Add library="dxva2" />
+			<Add library="strmiids" />
+			<Add directory="$(#fl.lib)" />
+			<Add directory="ffmpeg" />
+		</Linker>
+		<Unit filename="res\resource.h" />
+		<Unit filename="res\resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="src\appaudio.cpp" />
+		<Unit filename="src\appaudio.h" />
+		<Unit filename="src\appmain.cpp" />
+		<Unit filename="src\appmain.h" />
+		<Unit filename="src\audio.h" />
+		<Unit filename="src\cmdutils.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\cmdutils.h" />
+		<Unit filename="src\cpthread.cpp" />
+		<Unit filename="src\cpthread.h" />
+		<Unit filename="src\ffplaymod.cpp" />
+		<Unit filename="src\ffplaymod.h" />
+		<Unit filename="src\fltk\Fl_MRender.H" />
+		<Unit filename="src\fltk\Fl_MRender.cpp" />
+		<Unit filename="src\fltk\Fl_TransBox.cpp" />
+		<Unit filename="src\fltk\Fl_TransBox.h" />
+		<Unit filename="src\va_copy.h" />
+		<Unit filename="src\win32\ffplaymod_win32.cpp" />
+		<Unit filename="src\win32\win32audio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
